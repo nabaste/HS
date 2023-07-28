@@ -9,13 +9,13 @@ void Bird::update()
 
 void Bird::eat()
 {
-	//std::map<std::shared_ptr<Bird>, std::shared_ptr<Branch>>& birdPos = Tree::instance().birdPositions;
-	//std::for_each(birdPos.begin(), birdPos.end(), [this](auto& p) {
-	//	auto& [key, value] = p;
-	//	if (key.get() == this) {
-	//		value->looseLife(foodConsumedPerTurn_);
-	//	}
-	//	});
+	std::map<std::shared_ptr<Bird>, std::shared_ptr<Branch>>& birdPos = Tree::instance().birdPositions;
+	std::for_each(birdPos.begin(), birdPos.end(), [this](auto& p) {
+		auto& [key, value] = p;
+		if (key.get() == this) {
+			value->looseLife(foodConsumedPerTurn_);
+		}
+		});
 }
 
 void Bird::grow()

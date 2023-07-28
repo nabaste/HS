@@ -5,7 +5,7 @@
 class Bird :   public Entity
 {
 public:
-	Bird(int name): age_(0), name_(name), lifeExpectancy_(5), life_(100.00)
+	Bird(int name): age_(0), name_(name), lifeExpectancy_(5), life_(100.00), foodConsumedPerTurn_(1.3)
 	{}
 
 	void update();

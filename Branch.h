@@ -24,7 +24,7 @@ public:
 
     // Getters
     int const data() { return data_; }
-    double life() { return life_; }
+    double const life() { return life_; }
     const std::vector<std::shared_ptr<Branch>>& children() { return children_; }
 
 private:
