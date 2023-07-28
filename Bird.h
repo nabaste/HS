@@ -10,10 +10,10 @@ public:
 
 	void update();
 
-	int age() { return age_; }
-	int name() { return name_; }
-	int lifeExpectancy() { return lifeExpectancy_; }
-	double life() { return life_; }
+	int const age() { return age_; }
+	int const name() { return name_; }
+	int const lifeExpectancy() { return lifeExpectancy_; }
+	double const life() { return life_; }
 
 	void grow();
 	void eat();
