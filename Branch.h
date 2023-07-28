@@ -17,6 +17,7 @@ public:
     void update();
 
     void grow();
+    void spawnChild();
     void addChild(std::shared_ptr<Branch> child) {
         children_.push_back(child);
     }
