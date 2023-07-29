@@ -7,7 +7,7 @@ void render(int turnNumber)
 	std::cout << "It is turn number "<< turnNumber << "\n" << "There are " << Tree::instance().branchAmount() << " branches: " << std::endl;
 	Tree::instance().breadthFirstTraversal();
 	std::cout << "There are " << Tree::instance().birdPositions.size() << " birds:" << std::endl;
-	for (auto kv : Tree::instance().birdPositions)
+	for (std::pair<std::shared_ptr<Bird>, std::shared_ptr<Branch>> kv : Tree::instance().birdPositions)
 	{
 		std::cout << "	Bird no. " << kv.first->name() << " is " << kv.first->age() << " turns old and is on branch " << kv.second->data() << " with life " << kv.first->life() << std::endl;
 	}

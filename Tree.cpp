@@ -37,7 +37,7 @@ const void Tree::breadthFirstTraversal() {
 	nodeQueue.push(root_);
 
 	while (!nodeQueue.empty()) {
-		const auto currentNode = nodeQueue.front();
+		const std::shared_ptr<Branch> currentNode = nodeQueue.front();
 		nodeQueue.pop();
 
 		std::cout << "	branch " << currentNode->data() << " has " << currentNode->life() << " life." << std::endl;
@@ -60,7 +60,7 @@ const int Tree::branchAmount()
 	nodeQueue.push(root_);
 
 	while (!nodeQueue.empty()) {
-		const auto currentNode = nodeQueue.front();
+		const std::shared_ptr<Branch> currentNode = nodeQueue.front();
 		nodeQueue.pop();
 
 		count++;

@@ -1,6 +1,6 @@
 #pragma once
 #include <list>
-#include <algorithm>
+//#include <algorithm>
 #include <map>
 
 #include "Entity.h"
