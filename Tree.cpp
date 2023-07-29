@@ -5,15 +5,31 @@ void Tree::simLoop()
 	if (root_) {
 		branchGrowthPerTurn = treeGrowthPerTurn_ / branchAmount();
 	}
-	std::for_each(entities_.begin(), entities_.end(), [](std::shared_ptr<Entity> e) {
+	std::for_each(entities_.begin(), entities_.end(), [](std::shared_ptr<Entity>& e) {
 		e->update();
 	});
-	std::for_each(entities_.begin(), entities_.end(), [](std::shared_ptr<Entity> e) {
+
+	std::for_each(entities_.begin(), entities_.end(), [](std::shared_ptr<Entity>& e) {
 		e->lateUpdate();
 		});
-	//std::for_each(entities_.begin(), entities_.end(), [](std::shared_ptr<Entity> e) {
-	//	e->destroy();
-	//	});
+
+	destroyElements();
+}
+
+void Tree::destroyElements()
+{
+	entities_.erase(std::remove_if(entities_.begin(), entities_.end(),
+	[](const std::shared_ptr<Entity>& e) { return e->markedForDeath_; }),
+	entities_.end());
+
+	for (auto it = birdPositions.begin(); it != birdPositions.end(); ) {
+		if (it->first->markedForDeath_) {
+			it = birdPositions.erase(it);
+		}
+		else {
+			++it;
+		}
+	}
 }
 
 void Tree::subscribeToUpdate(std::shared_ptr<Entity> entity)

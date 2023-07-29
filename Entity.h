@@ -8,9 +8,7 @@ public:
 	virtual ~Entity() {}
 	virtual void update() = 0;
 	virtual void lateUpdate() = 0;
-	void destroy();
 
-protected:
 	bool markedForDeath_;
 
 private:

@@ -16,6 +16,9 @@ void render(int turnNumber)
 
 int main()
 {
+	//_CrtSetDbgFlag(_CRTDBG_ALLOC_MEM_DF | _CRTDBG_LEAK_CHECK_DF | _CRTDBG_CHECK_ALWAYS_DF);
+
+
 	Tree& tree = Tree::instance();
 	std::shared_ptr<Branch> rootPtr = std::make_shared<Branch>(1);
 	tree.setRoot(rootPtr);

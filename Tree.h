@@ -21,6 +21,7 @@ public:
 	
 	void simLoop();
 	void subscribeToUpdate(std::shared_ptr<Entity> entity);
+	void destroyElements();
 
 	void setRoot(std::shared_ptr<Branch> root);
 	void const breadthFirstTraversal();
