@@ -3,7 +3,7 @@
 class Entity
 {
 public:
-	Entity() = default;
+	Entity() : markedForDeath_(false) {};
 
 	virtual ~Entity() {}
 	virtual void update() = 0;
