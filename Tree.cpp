@@ -9,9 +9,12 @@ void Tree::simLoop()
 	std::for_each(entities_.begin(), entities_.end(), [](std::shared_ptr<Entity> e) {
 		e->update();
 	});
-
-	//remove dead birds and branches
-
+	std::for_each(entities_.begin(), entities_.end(), [](std::shared_ptr<Entity> e) {
+		e->lateUpdate();
+		});
+	//std::for_each(entities_.begin(), entities_.end(), [](std::shared_ptr<Entity> e) {
+	//	e->destroy();
+	//	});
 }
 
 void Tree::subscribeToUpdate(std::shared_ptr<Entity> entity)

@@ -15,6 +15,7 @@ public:
     Branch(int data) : data_(data), life_(18.00) {}
 
     void update();
+    void lateUpdate();
 
     void grow();
     void spawnChild();

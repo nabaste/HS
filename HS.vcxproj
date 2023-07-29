@@ -130,6 +130,7 @@
   <ItemGroup>
     <ClCompile Include="Bird.cpp" />
     <ClCompile Include="Branch.cpp" />
+    <ClCompile Include="Entity.cpp" />
     <ClCompile Include="HS.cpp" />
     <ClCompile Include="Tree.cpp" />
   </ItemGroup>

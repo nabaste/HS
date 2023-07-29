@@ -2,6 +2,7 @@
 #include <iostream>
 
 #include "Entity.h"
+#include "Branch.h"
 class Bird :   public Entity
 {
 public:
@@ -9,6 +10,7 @@ public:
 	{}
 
 	void update();
+	void lateUpdate();
 
 	int const age() { return age_; }
 	int const name() { return name_; }
@@ -19,6 +21,10 @@ public:
 	void eat();
 	void mate();
 	void move();
+	void getMated();
+	//std::shared_ptr<Branch> getBranch();
+	void dieOfOldAge();
+
 private:
 	int age_;
 	int name_;

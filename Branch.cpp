@@ -12,6 +12,11 @@ void Branch::update()
     }
 }
 
+void Branch::lateUpdate()
+{
+
+}
+
 void Branch::grow()
 {
     life_ += Tree::instance().branchGrowthPerTurn;
