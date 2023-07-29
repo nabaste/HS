@@ -1,5 +1,3 @@
-#include "Branch.h"
-#include"Entity.h"
 #include "Tree.h";
 
 void Branch::update()

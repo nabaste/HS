@@ -1,5 +1,4 @@
 #include "Tree.h"
-#include "Entity.h"
 
 void Tree::simLoop()
 {

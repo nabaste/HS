@@ -1,4 +1,3 @@
-#include "Bird.h"
 #include "Tree.h"
 
 void Bird::update()
