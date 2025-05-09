@@ -91,7 +91,7 @@ The project is set up as a Visual Studio solution. To build and run:
 
 ## TO DO
 
-Implement comprehensive error handling
-Add proper documentation
-Add unit tests
-Add proper exception handling
+- Implement comprehensive error handling
+- Add proper documentation
+- Add unit tests
+- Add proper exception handling
