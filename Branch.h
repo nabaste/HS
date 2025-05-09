@@ -7,7 +7,7 @@
 #include"Entity.h"
 class Tree;
 
-class Branch : public Entity
+class Branch : public Entity, public std::enable_shared_from_this<Branch>
 {
 public:
 
@@ -19,10 +19,13 @@ public:
 
     void grow();
     void spawnChild();
-    void addChild(std::shared_ptr<Branch> child) {
-        children_.push_back(child);
-    }
+    void addChild(std::shared_ptr<Branch> child);
+    void setParent(std::shared_ptr<Branch> parent);
+    void looseChildren(int data);
+
     void looseLife(double amount);
+    void fallDown();
+    void die();
 
     // Getters
     int const data() { return data_; }
@@ -33,4 +36,5 @@ private:
     int data_;
     double life_;
     std::vector<std::shared_ptr<Branch>> children_;
+    std::shared_ptr<Branch> parent_;
 };

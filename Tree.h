@@ -11,8 +11,8 @@ class Tree {
 public:
 	static Tree& instance()
 	{
-		static Tree* instance = new Tree();
-		return *instance;
+		static Tree instance;
+		return instance;
 	}
 
 	// Delete the copy constructor and copy assignment operator to ensure no copy of the instance can be created
@@ -26,6 +26,7 @@ public:
 	void setRoot(std::shared_ptr<Branch> root);
 	void const breadthFirstTraversal();
 	int const branchAmount();
+	std::shared_ptr<Branch> getLiveliestBranch();
 	
 	double branchGrowthPerTurn;
 

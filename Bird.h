@@ -6,7 +6,7 @@
 class Bird :   public Entity
 {
 public:
-	Bird(int name): age_(0), name_(name), lifeExpectancy_(5), life_(100.00), foodConsumedPerTurn_(1.3)
+	Bird(int name): age_(0), name_(name), lifeExpectancy_(30), life_(100.00), foodConsumedPerTurn_(1.8), matingThreshold_(115.00), minBranchLife_(13.00)
 	{}
 
 	void update();
@@ -19,10 +19,9 @@ public:
 
 	void grow();
 	void eat();
-	void mate();
+	bool mate();
 	void move();
 	void getMated();
-	//std::shared_ptr<Branch> getBranch();
 	void dieOfOldAge();
 
 private:
@@ -31,5 +30,7 @@ private:
 	int lifeExpectancy_;
 	double life_;
 	double foodConsumedPerTurn_;
+	double matingThreshold_;
+	double minBranchLife_;
 };
 
