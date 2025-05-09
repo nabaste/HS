@@ -42,7 +42,7 @@ void Branch::setParent(std::shared_ptr<Branch> parent)
 
 void Branch::looseChildren(int data)
 {
-    if (data == 1) return; //es el root
+    if (data == 1) return; //root
     children_.erase(std::remove_if(children_.begin(), children_.end(),
         [data](const std::shared_ptr<Branch>& e) { return e->data() == data; }),
         children_.end());

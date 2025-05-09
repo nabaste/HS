@@ -12,10 +12,10 @@ public:
 	void update();
 	void lateUpdate();
 
-	int const age() { return age_; }
-	int const name() { return name_; }
-	int const lifeExpectancy() { return lifeExpectancy_; }
-	double const life() { return life_; }
+	int age() const { return age_; }
+	int name() const { return name_; }
+	int lifeExpectancy() const { return lifeExpectancy_; }
+	double life() const { return life_; }
 
 	void grow();
 	void eat();

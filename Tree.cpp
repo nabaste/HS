@@ -79,7 +79,7 @@ void Tree::setRoot(std::shared_ptr<Branch> root)
 }
 
 // Performs a breadth-first traversal of the tree and prints branch information
-const void Tree::breadthFirstTraversal() {
+void Tree::breadthFirstTraversal() const {
 	if (!root_) {
 		std::cout << "Root is nullptr" << std::endl;
 		return; // Empty tree, nothing to traverse
@@ -103,7 +103,7 @@ const void Tree::breadthFirstTraversal() {
 }
 
 // Counts the total number of branches in the tree
-const int Tree::branchAmount()
+int Tree::branchAmount() const
 {
 	if (!root_) {
 		return 0; // Empty tree, nothing to traverse
@@ -129,7 +129,7 @@ const int Tree::branchAmount()
 }
 
 // Finds the branch with the highest life value in the tree
-std::shared_ptr<Branch> Tree::getLiveliestBranch()
+std::shared_ptr<Branch> Tree::getLiveliestBranch() const
 {
 	if (!root_) {
 		return 0; // Empty tree, nothing to traverse

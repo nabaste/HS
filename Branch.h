@@ -28,9 +28,9 @@ public:
     void die();
 
     // Getters
-    int const data() { return data_; }
-    double const life() { return life_; }
-    const std::vector<std::shared_ptr<Branch>>& children() { return children_; }
+    int data() const { return data_; }
+    double life() const { return life_; }
+    const std::vector<std::shared_ptr<Branch>>& children() const { return children_; }
 
 private:
     int data_;

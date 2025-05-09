@@ -24,9 +24,9 @@ public:
 	void destroyElements();
 
 	void setRoot(std::shared_ptr<Branch> root);
-	void const breadthFirstTraversal();
-	int const branchAmount();
-	std::shared_ptr<Branch> getLiveliestBranch();
+	void breadthFirstTraversal() const;
+	int branchAmount() const;
+	std::shared_ptr<Branch> getLiveliestBranch() const;
 	
 	double branchGrowthPerTurn;
 
