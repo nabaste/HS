@@ -89,3 +89,9 @@ The project is set up as a Visual Studio solution. To build and run:
 2. Build the solution (F7 or Build > Build Solution)
 3. Run the program (F5 or Debug > Start Debugging)
 
+## TO DO
+
+Implement comprehensive error handling
+Add proper documentation
+Add unit tests
+Add proper exception handling
