@@ -3,10 +3,10 @@
 void Branch::update()
 {
     grow();
-    if (life_ > 25.00)
+    if (life_ > SPAWN_CHILD_THRESHOLD)
     {
         this->spawnChild();
-        life_ = 15.00;
+        life_ = LIFE_AFTER_SPAWN;
     }
 }
 
@@ -84,7 +84,7 @@ void Branch::fallDown()
         nodeQueue.pop();
 
         if (currentNode) {
-            currentNode->looseLife(999.00);
+            currentNode->looseLife(FALL_DAMAGE);
 
             const auto& children = currentNode->children();
             for (const auto& child : children) {

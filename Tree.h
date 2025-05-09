@@ -9,6 +9,10 @@
 
 class Tree {
 public:
+	// Constants for tree mechanics
+	static constexpr double TREE_GROWTH_PER_TURN = 10.00;
+	static constexpr double INITIAL_BRANCH_GROWTH_PER_TURN = 0.00;
+
 	static Tree& instance()
 	{
 		static Tree instance;
@@ -36,8 +40,8 @@ private:
 	Tree() {
 		numEntities_ = 0;
 		root_ = nullptr;
-		treeGrowthPerTurn_ = 10.00;
-		branchGrowthPerTurn = 0;
+		treeGrowthPerTurn_ = TREE_GROWTH_PER_TURN;
+		branchGrowthPerTurn = INITIAL_BRANCH_GROWTH_PER_TURN;
 	};
 
 	std::list<std::shared_ptr<Entity>> entities_;

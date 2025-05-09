@@ -10,9 +10,14 @@ class Tree;
 class Branch : public Entity, public std::enable_shared_from_this<Branch>
 {
 public:
+    // Constants for branch mechanics
+    static constexpr double INITIAL_LIFE = 18.00;
+    static constexpr double SPAWN_CHILD_THRESHOLD = 25.00;
+    static constexpr double LIFE_AFTER_SPAWN = 15.00;
+    static constexpr double FALL_DAMAGE = 999.00;
 
-    Branch() : data_(0), life_(18.00) {}
-    Branch(int data) : data_(data), life_(18.00) {}
+    Branch() : data_(0), life_(INITIAL_LIFE) {}
+    Branch(int data) : data_(data), life_(INITIAL_LIFE) {}
 
     void update();
     void lateUpdate();

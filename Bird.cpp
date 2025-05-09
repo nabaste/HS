@@ -30,9 +30,9 @@ void Bird::eat()
 
 void Bird::grow()
 {
-	life_ += 5.3;
+	life_ += LIFE_GROWTH_PER_TURN;
 	age_++;
- }
+}
 
 bool Bird::mate()
 {
@@ -47,7 +47,7 @@ bool Bird::mate()
 			Tree::instance().subscribeToUpdate(newBirdPtr);
 			Tree::instance().birdPositions[newBirdPtr] = value;
 			key->getMated();
-			life_ = 70.00;
+			life_ = LIFE_AFTER_MATING;
 			mated = true;
 		}
 	});
@@ -77,7 +77,7 @@ void Bird::move()
 
 void Bird::getMated()
 {
-	life_ = 70.00;
+	life_ = LIFE_AFTER_MATING;
 }
 
 void Bird::dieOfOldAge()
