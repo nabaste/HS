@@ -105,13 +105,13 @@
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp20</LanguageStandard>
-      <AdditionalIncludeDirectories>$(ProjectDir)src\; $(ProjectDir)third-party\glfw\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)src\; $(ProjectDir)third-party\glfw\include; $(ProjectDir)third-party\glad\include</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalLibraryDirectories>$(ProjectDir)third-party\glfw\lib-vc2022</AdditionalLibraryDirectories>
-      <AdditionalDependencies>$(CoreLibraryDependencies);%(AdditionalDependencies); glfw3.lib; opengl32.lib</AdditionalDependencies>
+      <AdditionalDependencies>$(CoreLibraryDependencies);%(AdditionalDependencies); glfw3dll.lib; opengl32.lib</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -135,12 +135,16 @@
     <ClCompile Include="src\entities\Branch.cpp" />
     <ClCompile Include="src\HS.cpp" />
     <ClCompile Include="src\Tree.cpp" />
+    <ClCompile Include="third-party\glad\src\gl.c" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="src\core\Renderer.h" />
+    <ClInclude Include="src\core\Shader.h" />
     <ClInclude Include="src\entities\Bird.h" />
     <ClInclude Include="src\entities\Branch.h" />
     <ClInclude Include="src\entities\Entity.h" />
     <ClInclude Include="src\Tree.h" />
+    <ClInclude Include="third-party\glad\include\glad\gl.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

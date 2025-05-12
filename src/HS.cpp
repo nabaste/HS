@@ -1,3 +1,6 @@
+#define GLAD_GL_IMPLEMENTATION
+#include <glad/gl.h>
+#define GLFW_INCLUDE_NONE
 #include <GLFW/glfw3.h>
 
 #include <iostream>
@@ -49,7 +52,10 @@ int main()
 		return -1;
 	}
 
+
+
 	glfwMakeContextCurrent(window);
+	gladLoadGL(glfwGetProcAddress);
 
 	while (!glfwWindowShouldClose(window)) {
 		glClear(GL_COLOR_BUFFER_BIT);
