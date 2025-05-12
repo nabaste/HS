@@ -105,10 +105,13 @@
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp20</LanguageStandard>
+      <AdditionalIncludeDirectories>"C:\Users\nbast\Documents\GitHub\HS\third-party\glfw\include"</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>"C:\Users\nbast\Documents\GitHub\HS\third-party\glfw\lib-vc2022"</AdditionalLibraryDirectories>
+      <AdditionalDependencies>$(CoreLibraryDependencies);%(AdditionalDependencies); glfw3.lib; opengl32.lib</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -128,16 +131,16 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Bird.cpp" />
-    <ClCompile Include="Branch.cpp" />
-    <ClCompile Include="HS.cpp" />
-    <ClCompile Include="Tree.cpp" />
+    <ClCompile Include="src\Bird.cpp" />
+    <ClCompile Include="src\Branch.cpp" />
+    <ClCompile Include="src\HS.cpp" />
+    <ClCompile Include="src\Tree.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Bird.h" />
-    <ClInclude Include="Entity.h" />
-    <ClInclude Include="Tree.h" />
-    <ClInclude Include="Branch.h" />
+    <ClInclude Include="src\Bird.h" />
+    <ClInclude Include="src\Branch.h" />
+    <ClInclude Include="src\Entity.h" />
+    <ClInclude Include="src\Tree.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

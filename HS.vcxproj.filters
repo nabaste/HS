@@ -15,30 +15,30 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="HS.cpp">
+    <ClCompile Include="src\Bird.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Tree.cpp">
+    <ClCompile Include="src\Branch.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Branch.cpp">
+    <ClCompile Include="src\HS.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Bird.cpp">
+    <ClCompile Include="src\Tree.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Tree.h">
+    <ClInclude Include="src\Bird.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Entity.h">
+    <ClInclude Include="src\Branch.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Branch.h">
+    <ClInclude Include="src\Entity.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Bird.h">
+    <ClInclude Include="src\Tree.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
