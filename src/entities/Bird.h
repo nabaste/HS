@@ -1,8 +1,8 @@
 #pragma once
 #include <iostream>
 
-#include "Entity.h"
-#include "Branch.h"
+#include "entities/Entity.h"
+#include "entities/Branch.h"
 class Bird :   public Entity
 {
 public:

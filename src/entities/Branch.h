@@ -4,7 +4,7 @@
 #include <queue>
 #include <iostream>
 
-#include"Entity.h"
+#include"entities/Entity.h"
 class Tree;
 
 class Branch : public Entity, public std::enable_shared_from_this<Branch>

@@ -3,9 +3,9 @@
 //#include <algorithm>
 #include <map>
 
-#include "Entity.h"
-#include "Branch.h"
-#include "Bird.h"
+#include "entities/Entity.h"
+#include "entities/Branch.h"
+#include "entities/Bird.h"
 
 class Tree {
 public:
